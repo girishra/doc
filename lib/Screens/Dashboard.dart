@@ -41,18 +41,18 @@ class _DashboardState extends State<Dashboard> {
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,childAspectRatio: 1.6/2),
               children: <Widget>[
-                _gridItems(Icons.airport_shuttle),
-                _gridItems(Icons.add_shopping_cart),
-                _gridItems(Icons.arrow_drop_down_circle),
-                _gridItems(Icons.bluetooth_searching),
-                _gridItems(Icons.add_location),
-                _gridItems(Icons.arrow_drop_down_circle),
-                _gridItems(Icons.bluetooth_searching),
-                _gridItems(Icons.add_location),
-                _gridItems(Icons.arrow_drop_down_circle),
-                _gridItems(Icons.add_location),
-                _gridItems(Icons.arrow_drop_down_circle),
-                _gridItems(Icons.bluetooth_searching),
+               _gridItems(AssetImage("assets/lab.png")),
+                _gridItems(AssetImage("assets/corona.png")),
+                 _gridItems(AssetImage("assets/pills.png")),
+                  _gridItems(AssetImage("assets/search.png")),
+                   _gridItems(AssetImage("assets/female.png")),
+                    _gridItems(AssetImage("assets/ambulance.png")),
+                     _gridItems(AssetImage("assets/testResult.png")),
+                      _gridItems(AssetImage("assets/syringe.png")),
+                       _gridItems(AssetImage("assets/pregnant.png")),
+                        _gridItems(AssetImage("assets/calculator.png")),
+                         _gridItems(AssetImage("assets/meal.png")),
+                          _gridItems(AssetImage("assets/training.png")),
               ],
             ),
 
@@ -70,17 +70,20 @@ _gridItems(icons){
   return Column(
     children: <Widget>[
       Card(
+        shape: BeveledRectangleBorder(
+    borderRadius: BorderRadius.circular(10.0),
+  ),
         elevation: 3,
         child: Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Icon(
-            icons,size: 25.0,
+          child: Image(
+            image: icons,
             color: Colors.blue,
           ),
         ),
       ),
 
-      SizedBox(height: 10.0,),
+      SizedBox(height: 2.0,),
 
       Text(" Name"),
 

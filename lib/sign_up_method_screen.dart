@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swasthu/register_screen.dart';
+import 'components/bottomnavbar.dart';
 class SignupMethods extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -83,10 +84,10 @@ class _LoginScreenState extends State<SignupMethods> {
         color: Colors.white,
         // Within the `FirstRoute` widget
         onPressed: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => BottomNav()),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BottomNav()),
+          );
         },
 
         child: new Row(
