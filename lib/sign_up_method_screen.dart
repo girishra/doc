@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swasthu/components/bottomnavbar.dart';
 import 'package:swasthu/mobile_number.dart';
 import 'intro_screen.dart';
 
@@ -80,11 +81,17 @@ class _LoginScreenState extends State<SignupMethods> {
                 
                 new Container(
                   width: double.infinity,
-      // margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),
       child: new RaisedButton(
         padding: EdgeInsets.only(top: 3.0,bottom: 3.0,left: 3.0),
         color: Colors.white,
-        onPressed: () {},
+        // Within the `FirstRoute` widget
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BottomNav()),
+          );
+        },
+
         child: new Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -109,7 +116,9 @@ class _LoginScreenState extends State<SignupMethods> {
       child: new RaisedButton(
         padding: EdgeInsets.only(top: 3.0,bottom: 3.0,left: 3.0),
        color: const Color(0xFF4285F4),
-        onPressed: () {},
+        onPressed: () {
+
+        },
         child: new Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
