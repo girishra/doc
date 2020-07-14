@@ -25,6 +25,7 @@ class BottomNavState extends State<BottomNav> {
       home: Scaffold(
           appBar: AppBar(
             leading: Icon(Icons.add),
+            centerTitle: true,
             title: Column(
               children: <Widget>[
                 Text("Your location"),
