@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swasthu/mobile_number.dart';
-import 'intro_screen.dart';
-
+import 'package:swasthu/register_screen.dart';
 class SignupMethods extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -23,7 +21,7 @@ class _LoginScreenState extends State<SignupMethods> {
         Color.fromRGBO(15, 148, 180, 1)
       ])),
       padding: EdgeInsets.fromLTRB(32, 82, 32, 0),
-      child: SingleChildScrollView(
+      child: SafeArea(
         child: Form(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -45,7 +43,7 @@ class _LoginScreenState extends State<SignupMethods> {
                       text: '\nTALK TO A PHYSICIAN',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: Colors.grey[200],
                       ),
                     ),
                   ],
@@ -61,21 +59,21 @@ class _LoginScreenState extends State<SignupMethods> {
                       text: "See doctor on your phone",
                       style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white,
+                          color: Colors.grey[200],
                          ),
                     ),
                     TextSpan(
                       text: '\nwith in minutes',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Colors.grey[200],
                       ),
                     ),
                   ],
                 ),
               ),
                SizedBox(
-                height:MediaQuery.of(context).size.height/5,
+                height:MediaQuery.of(context).size.height/7,
               ),
                 
                 new Container(
@@ -145,7 +143,12 @@ class _LoginScreenState extends State<SignupMethods> {
       child: new RaisedButton(
         padding: EdgeInsets.only(top: 3.0,bottom: 3.0,left: 3.0),
        color: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+           Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => RegisterScreen()));
+        },
         child: new Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -183,6 +186,33 @@ class _LoginScreenState extends State<SignupMethods> {
                   ],
                 ),
               ),
+              SizedBox(height: MediaQuery.of(context).size.height / 7.5),
+              RichText(
+                 textAlign: TextAlign.center,
+                  // textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "By continuing you agree to our Terms & Conditions",
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                           ),
+                      ),
+                      TextSpan(
+                        
+                        
+                        text: '\n&Privacy Policy',
+                        style: TextStyle(
+                          
+                          decoration: TextDecoration.underline,
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
             ],
           ),
         ),

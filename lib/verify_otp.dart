@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swasthu/register_screen.dart';
+import 'package:swasthu/sign_up_method_screen.dart';
 import 'intro_screen.dart';
 
 class VerifyOtp extends StatefulWidget {
@@ -65,7 +66,8 @@ class _LoginScreenState extends State<VerifyOtp> {
                       ),
                     ],
                   ),
-                )),
+                )
+                ),
               ),
               SizedBox(                height: MediaQuery.of(context).size.height/25,
 ),
@@ -124,7 +126,7 @@ class _LoginScreenState extends State<VerifyOtp> {
                      Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (BuildContext context) => RegisterScreen()));
+                              builder: (BuildContext context) => SignupMethods()));
                   },
                   color: Colors.white,
                 ),

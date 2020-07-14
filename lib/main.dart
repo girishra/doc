@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swasthu/sign_up_method_screen.dart';
-import 'intro_screen.dart';
-
+import 'package:swasthu/intro_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignupMethods(),
+      home: PreSignUpSlider(),
     );
   }
 }
