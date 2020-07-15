@@ -46,11 +46,11 @@ class BottomNavState extends State<BottomNav> {
              type: BottomNavigationBarType.fixed,
             
             items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Image.asset("assets/home.png"), title: Text('Home')),
-              BottomNavigationBarItem(icon: Image.asset("assets/order.png"), title: Text('My order')),
-              BottomNavigationBarItem(icon: Image.asset("assets/health.png"), title: Text('Appts')),
-              BottomNavigationBarItem(icon:  Image.asset("assets/phone.png"), title: Text('Call History')),
-              BottomNavigationBarItem(icon: Image.asset("assets/wallet.png"), title: Text('Health Wallet')),
+              BottomNavigationBarItem(icon: Image.asset("assets/home.png",width: 20,height: 20,), title: Text('Home',style: TextStyle(fontSize: 10),)),
+              BottomNavigationBarItem(icon: Image.asset("assets/order.png",width: 20,height: 20), title: Text('My order',style: TextStyle(fontSize: 10),)),
+              BottomNavigationBarItem(icon: Image.asset("assets/health.png",width: 20,height: 20), title: Text('Appts',style: TextStyle(fontSize: 10),)),
+              BottomNavigationBarItem(icon:  Image.asset("assets/phone.png",width: 20,height: 20), title: Text('Call History',style: TextStyle(fontSize: 10),)),
+              BottomNavigationBarItem(icon: Image.asset("assets/wallet.png",width: 20,height: 20), title: Text('Health Wallet',style: TextStyle(fontSize: 10),)),
 
             ],
             currentIndex: selectedIndex,
