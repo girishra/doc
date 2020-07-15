@@ -24,18 +24,24 @@ class BottomNavState extends State<BottomNav> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(backgroundColor: Colors.white,
-            leading: Icon(Icons.add),
-            centerTitle: true,
-            title: Column(
-              children: <Widget>[
-                Text("Your location",style: TextStyle(
-                  color: Colors.black
-                ),),
-                Text("Address",style: TextStyle(
-                  color: Colors.black
-                ),),
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(70.0),
+                      child: AppBar(backgroundColor: Colors.white,
+              leading: Image.asset("assets/notification.png",height: 30,width: 30,),
+              centerTitle: true,
+              actions: <Widget>[
+                Image.asset("assets/icons8_Settings_100px_1.png")
               ],
+              title: Column(
+                children: <Widget>[
+                  Text("Your location",style: TextStyle(
+                    color: Colors.grey,fontSize: 12
+                  ),),
+                  Text("33B Baker's Street",style: TextStyle(
+                    color: Colors.black
+                  ),),
+                ],
+              ),
             ),
           ),
 
