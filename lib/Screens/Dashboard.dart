@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-
-
 class Dashboard extends StatefulWidget {
   @override
   _DashboardState createState() => _DashboardState();
 }
-
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
@@ -29,15 +26,12 @@ class _DashboardState extends State<Dashboard> {
               'http://freefiremobile-a.akamaihd.net/ffwebsite/images/wallpaper/pop/004.jpg'),
           ExactAssetImage("assets/game_img/game03.png")
         ],
-      ),),
-
-
-
+      ),
+      ),
           // icons starts from here
           SizedBox(height: 20,),
           Container(
              height: 400,
-
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,childAspectRatio: 1.6/2),
               children: <Widget>[
@@ -62,10 +56,7 @@ class _DashboardState extends State<Dashboard> {
       ),
     );
   }
-
 }
-
-
 _gridItems(icons){
   return Column(
     children: <Widget>[
@@ -82,15 +73,9 @@ _gridItems(icons){
           ),
         ),
       ),
-
       SizedBox(height: 2.0,),
-
-      Text(" Name"),
-
+      Text("Name"),
       SizedBox(height: 10.0,),
-
     ],
   );
 }
-
-

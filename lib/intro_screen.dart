@@ -3,7 +3,6 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:swasthu/login_screen.dart';
 
 
-
 class PreSignUpSlider extends StatefulWidget {
 
   @override

@@ -20,7 +20,9 @@ class _LoginScreenState extends State<SignupMethods> {
           gradient: LinearGradient(colors: [
         Color.fromRGBO(56, 103, 180, 1),
         Color.fromRGBO(15, 148, 180, 1)
-      ])),
+      ]
+      )
+      ),
       padding: EdgeInsets.fromLTRB(32, 82, 32, 0),
       child: SafeArea(
         child: Form(
@@ -74,7 +76,7 @@ class _LoginScreenState extends State<SignupMethods> {
                 ),
               ),
                SizedBox(
-                height:MediaQuery.of(context).size.height/7,
+                height:MediaQuery.of(context).size.height/6.8,
               ),
                 
                 new Container(
@@ -126,7 +128,7 @@ class _LoginScreenState extends State<SignupMethods> {
             ),
             new Container(
               padding: EdgeInsets.only(left: 10.0,right: 10.0),
-                child: new Text("Register with Facebook",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)
+                child: new Text("Register with Facebook",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
             ),
           ],
         )
@@ -150,6 +152,9 @@ class _LoginScreenState extends State<SignupMethods> {
       width: double.infinity,
       // margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),
       child: new RaisedButton(
+        shape: RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(15.0),
+),
         padding: EdgeInsets.only(top: 3.0,bottom: 3.0,left: 3.0),
        color: Colors.white,
         onPressed: () {
@@ -167,7 +172,7 @@ class _LoginScreenState extends State<SignupMethods> {
             ),
             new Container(
               padding: EdgeInsets.only(left: 10.0,right: 10.0),
-                child: new Text("Continue user registration",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)
+                child: new Text("Continue user registration",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),)
             ),
           ],
         )
@@ -209,11 +214,8 @@ class _LoginScreenState extends State<SignupMethods> {
                            ),
                       ),
                       TextSpan(
-                        
-                        
                         text: '\n&Privacy Policy',
-                        style: TextStyle(
-                          
+                        style: TextStyle(            
                           decoration: TextDecoration.underline,
                           fontSize: 14,
                           color: Colors.white,
