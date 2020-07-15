@@ -8,146 +8,165 @@ class SignupMethods extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<SignupMethods> {
+
+
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
-        body: new Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/doc.png"),
-                fit: BoxFit.cover,
-              ),
-              color: Colors.transparent,
-              gradient: LinearGradient(colors: [
-                Color.fromRGBO(56, 103, 180, 1),
-                Color.fromRGBO(15, 148, 180, 1)
-              ])),
-          padding: EdgeInsets.fromLTRB(10, 82, 10, 0),
-          child: SafeArea(
-            child: Form(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.start,
+
+      body: Stack(
+        children: <Widget>[
+          Container(
+            height: size.height,
+            width: size.width,
+            child: new Image.asset(
+              'assets/doc.png',
+              width: size.width,
+              height: size.height,
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+
+
+
+
+
+          Positioned(
+            left: 110,
+         top: 200,
+
+            child: Center(
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "DOCARE",
+                        style: TextStyle(
+                            fontSize: 40,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      TextSpan(
+                        text: '\nTALK TO A PHYSICIAN',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey[200],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+                
+                ),
+               
+          ),
+          
+          Positioned(
+            
+            left: 90,
+         top: 350,
+
+            child: Center(
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "See doctor on your phone",
+                        style: TextStyle(
+                            fontSize: 20,
+                          color: Colors.grey[200],
+                           ),
+                      ),
+                      TextSpan(
+                        text: '\nwith in minutes',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey[200],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+                
+                ),
+               
+          ),
+
+
+
+          Positioned(
+              bottom: 90,
+              left: 50,
+              child: new Column(
                 children: <Widget>[
-                  Center(
-                      child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "DOCARE",
-                          style: TextStyle(
-                              fontSize: 40,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        TextSpan(
-                          text: '\nTALK TO A PHYSICIAN',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey[200],
-                          ),
-                        ),
-                      ],
-                    ),
-                  )),
-                  SizedBox(height: MediaQuery.of(context).size.height / 8),
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "See doctor on your phone",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey[200],
-                          ),
-                        ),
-                        TextSpan(
-                          text: '\nwith in minutes',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey[200],
-                          ),
-                        ),
-                      ],
-                    ),
+
+                  new Container(
+                    height :50,
+                    child: new RaisedButton(
+                        // padding:
+                        // EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
+                        color: Colors.white,
+                        // Within the `FirstRoute` widget
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BottomNav()),
+                          );
+                        },
+                        child:
+                        
+                         new Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            new Image.asset(
+                              'assets/google.png',
+                              height: 38.0,
+                            ),
+                            new Container(
+                                // padding:
+                                // EdgeInsets.only(left: 10.0, right: 10.0),
+                                child: new Text(
+                                  "Register with Google",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                          ],
+                        )),
                   ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height / 7,
+
+SizedBox(height: 10,),
+                  new Container(
+                    height: 50,
+                    child: new RaisedButton(
+                        // padding:
+                        // EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
+                        color: const Color(0xFF4285F4),
+                        onPressed: () {},
+                        child: new Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            new Image.asset(
+                              'assets/fb.png',
+                              height: 38.0,
+                            ),
+                            new Container(
+                                // padding:
+                                // EdgeInsets.only(left: 32.0, right: 10.0),
+                                child: new Text(
+                                  "Register with Facebook",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                          ],
+                        )),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                    child: new Container(
-                      width: double.infinity,
-                      child: new RaisedButton(
-                          padding:
-                              EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
-                          color: Colors.white,
-                          // Within the `FirstRoute` widget
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => BottomNav()),
-                            );
-                          },
-                          child: new Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              new Image.asset(
-                                'assets/google.png',
-                                height: 38.0,
-                              ),
-                              new Container(
-                                  padding:
-                                      EdgeInsets.only(left: 10.0, right: 10.0),
-                                  child: new Text(
-                                    "Register with Google",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  )),
-                            ],
-                          )),
-                    ),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height / 45,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                    child: new Container(
-                      width: double.infinity,
-                      // margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),
-                      child: new RaisedButton(
-                          padding:
-                              EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
-                          color: const Color(0xFF4285F4),
-                          onPressed: () {},
-                          child: new Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              new Image.asset(
-                                'assets/fb.png',
-                                height: 38.0,
-                              ),
-                              new Container(
-                                  padding:
-                                      EdgeInsets.only(left: 32.0, right: 10.0),
-                                  child: new Text(
-                                    "Register with Facebook",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  )),
-                            ],
-                          )),
-                    ),
-                  ),
+                  SizedBox(height: 10,),
                   Center(
                     child: Container(
                       child: Text(
@@ -160,42 +179,44 @@ class _LoginScreenState extends State<SignupMethods> {
                       color: Colors.transparent,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                    child: new Container(
-                      width: double.infinity,
-                      // margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),
-                      child: new RaisedButton(
-                          padding:
-                              EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        RegisterScreen()));
-                          },
-                          child: new Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              new Image.asset(
-                                'assets/person.png',
-                                height: 38.0,
-                              ),
-                              new Container(
-                                  padding:
-                                      EdgeInsets.only(left: 10.0, right: 10.0),
-                                  child: new Text(
-                                    "Continue user registration",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  )),
-                            ],
-                          )),
-                    ),
+                  SizedBox(height: 10,),
+                  new Container(
+                    height: 50,// margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 5.0),
+                    child: new RaisedButton(
+                      shape: RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(15.0),
+),
+                        // padding:
+                        // EdgeInsets.only(top: 3.0, bottom: 3.0, left: 3.0),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      RegisterScreen()));
+                        },
+                        child: new Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            new Image.asset(
+                              'assets/person.png',
+                              height: 38.0,
+                            ),
+                            new Container(
+                              
+                                // padding:
+                                // EdgeInsets.only(left: 10.0, right: 10.0),
+                                child: new Text(
+                                  "Continue user registration",
+                                  style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                          ],
+                        )),
                   ),
+                  SizedBox(height: 10,),
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
@@ -218,35 +239,47 @@ class _LoginScreenState extends State<SignupMethods> {
                       ],
                     ),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height / 11.0),
-                  RichText(
-                    textAlign: TextAlign.center,
-                    // textAlign: TextAlign.center,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text:
-                              "By continuing you agree to our Terms & Conditions",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '\n&Privacy Policy',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 14,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+
                 ],
-              ),
-            ),
+              )
           ),
-        ));
+
+
+
+
+          Positioned(
+
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child:    RichText(
+                  textAlign: TextAlign.center,
+                  // textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text:
+                        "By continuing you agree to our Terms & Conditions",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '\n&Privacy Policy',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+          ),
+        ],
+      ),
+    );
   }
+
 }
