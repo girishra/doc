@@ -13,7 +13,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
     return Scaffold(
 
       body:   Container(
-
+        height: MediaQuery.of(context).size.height *1,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -177,7 +177,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 children: <Widget>[
                     Container(
                     height: 120,
-                    
+
                     decoration: BoxDecoration(
                       border: Border.all(
                         width: 1, //                   <--- border width here
