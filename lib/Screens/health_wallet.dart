@@ -11,181 +11,268 @@ class _HealthWalletShopListState extends State<HealthWallet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/inquiry.png"),
-                      Text("current problem story\n (photos/text/videos)",style: TextStyle(
-                        color: Colors.blue
+
+      body:   Container(
+
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                    Container(
+                    height: 120,
+
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset("assets/inquiry.png"),
+                            Text("current problem story\n (photos/text/videos)",style: TextStyle(
+                                color: Colors.blue
+                            ),
+                            ),
+                          ],
+                        ),
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                    height: 80,
-                    child: VerticalDivider(color: Colors.grey[400])),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/hospital+.png"),
-                      Text("other medical problem(s)\n & family history",style: TextStyle(
-                        color: Colors.blue
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset("assets/hospital+.png"),
+                            Text("other medical problem(s)\n & family history", textAlign: TextAlign.center, style: TextStyle(
+                                color: Colors.blue
+                            ),
+                            ),
+                          ],
+                        ),
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Container(
-              height: 1.0,
-              color: Colors.grey[400],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/diabetes.png"),
-                      Text("Blood sugar log",style: TextStyle(
-                        color: Colors.blue
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset("assets/diabetes.png"),
+                            Text("Blood sugar \n log", textAlign: TextAlign.center, style: TextStyle(
+                                color: Colors.blue
+                            ),
+                            ),
+                          ],
+                        ),
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                    height: 80,
-                    child: VerticalDivider(color: Colors.grey[400])),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/labItems.png"),
-                      Text("Blood,Urine,X-ray,\n CT-scan,MRI Reports",style: TextStyle(
-                        color: Colors.blue
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/labItems.png"),
+                          Text("Blood,Urine,X-ray,\n CT-scan,MRI Reports", textAlign: TextAlign.center , style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Container(
-              height: 1.0,
-              color: Colors.grey[400],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/microscope.png"),
-                      Text("Biopsy reports",style: TextStyle(
-                        color: Colors.blue
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/hospitalRoom.png"),
+                          Text("Last hospital admission\nand discharge summary", textAlign: TextAlign.center , style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                    height: 80,
-                    child: VerticalDivider(color: Colors.grey[400])),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/ongoingMedicine.png"),
-                      Text("ongoing Medicine & allergy\n to any medicine and food",style: TextStyle(
-                        color: Colors.blue
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/ongoingMedicine.png"),
+                          Text("ongoing Medicine & allergy\n to any medicine and food", textAlign: TextAlign.center,  style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Container(
-              height: 1.0,
-              color: Colors.grey[400],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/wine.png"),
-                      Text("Smoking,tobbaco,\n alcohal & other habit",style: TextStyle(
-                        color: Colors.blue
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                    Container(
+                    height: 120,
+                    
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/wine.png"),
+                          Text("Smoking,tobbaco,\n alcohal & other habit", textAlign: TextAlign.center , style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                    height: 80,
-                    child: VerticalDivider(color: Colors.grey[400])),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/hospitalRoom.png"),
-                      Text("Last hospital admission\nand discharge summary",style: TextStyle(
-                        color: Colors.blue
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/microscope.png"),
+                          Text("Biopsy reports", textAlign: TextAlign.center , style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Container(
-              height: 1.0,
-              color: Colors.grey[400],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/pillReminder.png"),
-                      Text("medical reminder",style: TextStyle(
-                        color: Colors.blue
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/pillReminder.png"),
+                          Text("medical reminder", textAlign: TextAlign.center ,style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                    height: 80,
-                    child: VerticalDivider(color: Colors.grey[400])),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      Image.asset("assets/tarining.png"),
-                      Text("doctor's E-prescription",style: TextStyle(
-                        color: Colors.blue
+
+                    Container(
+                    height: 120,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1, //                   <--- border width here
+                      ),),
+
+                    width: MediaQuery.of(context).size.width *0.5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset("assets/training.png"),
+                          Text("doctor's E-prescription", textAlign: TextAlign.center , style: TextStyle(
+                              color: Colors.blue
+                          ),
+                          ),
+                        ],
                       ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            new Container(
-              height: 1.0,
-              color: Colors.grey[400],
-            ),
-          ],
+                ],
+              ),
+
+            ],
+          ),
         ),
       ),
     );
