@@ -29,26 +29,38 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        FlutterLogo(),
-                        Text("Text"),
+                        Image.asset("assets/weight.png"),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text("Weight",style: TextStyle(color: Colors.white,fontSize: 10),),
+                        ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        FlutterLogo(),
-                        Text("Text"),
+                        Image.asset("assets/thermometer.png"),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text("Temperature",style: TextStyle(color: Colors.white,fontSize: 10)),
+                        ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        FlutterLogo(),
-                        Text("Text"),
+                         Image.asset("assets/lungs.png"),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text("Respiratory rate",style: TextStyle(color: Colors.white,fontSize: 10)),
+                        ),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        FlutterLogo(),
-                        Text("Text"),
+                         Image.asset("assets/bloodSample.png"),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text("Blood group",style: TextStyle(color: Colors.white,fontSize: 10)),
+                        ),
                       ],
                     ),
                   ],
@@ -56,7 +68,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
               ),
               new Container(
                 height: 1.0,
-                color: Colors.black,
+                color: Colors.blue,
               ),
 
               Container(
@@ -77,26 +89,42 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       children: <Widget>[
                       Row(
                         children: <Widget>[
-                          FlutterLogo(),
-                          Text("Text"),
+                         Image.asset("assets/ruler.png"),
+                          Padding(
+                             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Height",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
                         ],
                       ),
                       Row(
                         children: <Widget>[
-                          FlutterLogo(),
-                          Text("Text"),
+                          Image.asset("assets/heartPulse.png"),
+                          Padding(
+                           padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Pulse rate",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
                         ],
                       ),
                       Row(
                         children: <Widget>[
-                          FlutterLogo(),
-                          Text("Text"),
+                          Image.asset("assets/hygrometer.png"),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Blood pressure",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
                         ],
                       ),
                       Row(
                         children: <Widget>[
-                          FlutterLogo(),
-                          Text("Text"),
+                       
+                          Container(
+                             decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      color:Colors.white,
+                      
+                      ),
+                            child: Text('Edit\n Details',style: TextStyle(color: Colors.blue,fontSize: 10),)),
+                       
                         ],
                       ),
 
