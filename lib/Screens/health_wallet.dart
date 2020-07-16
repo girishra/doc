@@ -27,18 +27,45 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
 children: <Widget>[
-  Container(
-    child: Text(
+  Column(
+    children: <Widget>[
+   
+   Image.asset("assets/inquiry.png",color: Colors.white),
+   Text(
     "weight",style: TextStyle(color: Colors.white),
-  ),),
-  Container(
-    child: Text("temperature",style: TextStyle(color: Colors.white)),
   ),
-   Container(
-    child: Text("Respiraory rate",style: TextStyle(color: Colors.white)),
+    ],
+  
   ),
-  Container(
-    child: Text("blood group",style: TextStyle(color: Colors.white)),
+  Column(
+    children: <Widget>[
+   
+   Image.asset("assets/inquiry.png",color: Colors.white),
+   Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
+  ),
+   Column(
+    children: <Widget>[
+   
+   Image.asset("assets/inquiry.png",color: Colors.white),
+   Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
+  ),
+  Column(
+    children: <Widget>[
+  
+   Image.asset("assets/inquiry.png",color: Colors.white),
+    Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
   ),
 ],
                 ),
@@ -57,18 +84,45 @@ children: <Widget>[
                  child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
 children: <Widget>[
-  Container(
-    child: Text(
-    "height",style: TextStyle(color: Colors.white)
-  ),),
-  Container(
-    child: Text("pulse rate",style: TextStyle(color: Colors.white)),
+  Column(
+    children: <Widget>[
+  
+   Image.asset("assets/inquiry.png",color: Colors.white),
+    Text(
+    "weight",style: TextStyle(color: Colors.white),
   ),
-   Container(
-    child: Text("blood pressure",style: TextStyle(color: Colors.white)),
+    ],
+  
   ),
-  Container(
-    child: Text("Enter new details",style: TextStyle(color: Colors.white)),
+  Column(
+    children: <Widget>[
+  
+   Image.asset("assets/inquiry.png",color: Colors.white),
+    Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
+  ),
+   Column(
+    children: <Widget>[
+   
+   Image.asset("assets/inquiry.png",color: Colors.white),
+   Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
+  ),
+  Column(
+    children: <Widget>[
+  
+   Image.asset("assets/inquiry.png",color: Colors.white,),
+    Text(
+    "weight",style: TextStyle(color: Colors.white),
+  ),
+    ],
+  
   ),
 ],
               ),
