@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:swasthu/Screens/Dashboard.dart';
+
+import '../Screens/health_wallet.dart';
 class BottomNav extends StatefulWidget {
   BottomNav({Key key}) : super(key: key);
 
@@ -13,7 +15,7 @@ class BottomNavState extends State<BottomNav> {
   final widgetOptions = [
     Dashboard(),
     // Text('Home'),
-    Text('My Order'),
+    HealthWallet(),
     Text('Appts'),
     Text('Call History'),
     Text('Health Wallet'),
