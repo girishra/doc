@@ -27,41 +27,57 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Image.asset("assets/weight.png"),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text("Weight",style: TextStyle(color: Colors.white,fontSize: 10),),
-                        ),
-                      ],
+                    Container(
+                      width: MediaQuery.of(context).size.width *0.20,
+
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset("assets/weight.png",height: 20,),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Weight",style: TextStyle(color: Colors.white,fontSize: 10),),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: <Widget>[
-                        Image.asset("assets/thermometer.png"),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text("Temperature",style: TextStyle(color: Colors.white,fontSize: 10)),
-                        ),
-                      ],
+                    Container(
+                      width: MediaQuery.of(context).size.width *0.22,
+
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset("assets/thermometer.png",height: 20),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Temperature",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: <Widget>[
-                         Image.asset("assets/lungs.png"),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text("Respiratory rate",style: TextStyle(color: Colors.white,fontSize: 10)),
-                        ),
-                      ],
+                    Container(
+                      width: MediaQuery.of(context).size.width *0.30,
+
+                      child: Row(
+                        children: <Widget>[
+                           Image.asset("assets/lungs.png",height: 20),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Respiratory rate",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: <Widget>[
-                         Image.asset("assets/bloodSample.png"),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text("Blood group",style: TextStyle(color: Colors.white,fontSize: 10)),
-                        ),
-                      ],
+                    Container(
+                      width: MediaQuery.of(context).size.width *0.25,
+
+                      child: Row(
+                        children: <Widget>[
+                           Image.asset("assets/bloodSample.png",height: 20),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text("Blood group",style: TextStyle(color: Colors.white,fontSize: 10)),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -82,50 +98,69 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   children: <Widget>[
 
                     new Wrap(
-                      spacing: 40.0, // gap between adjacent chips
+                      spacing: 0.0, // gap between adjacent chips
                       runSpacing: 4.0, // gap between lines
                       direction: Axis.horizontal, // m
                       // ain axis (rows or columns)
                       children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                         Image.asset("assets/ruler.png"),
-                          Padding(
+                      Container(
+                        width: MediaQuery.of(context).size.width *0.20,
+                        child: Row(
+                          children: <Widget>[
+                           Image.asset("assets/ruler.png",height: 20),
+                            Padding(
+                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text("Height",style: TextStyle(color: Colors.white,fontSize: 10)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width *0.22,
+
+                        child: Row(
+                          children: <Widget>[
+                            Image.asset("assets/heartPulse.png",height: 20),
+                            Padding(
                              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text("Height",style: TextStyle(color: Colors.white,fontSize: 10)),
-                          ),
-                        ],
+                              child: Text("Pulse rate",style: TextStyle(color: Colors.white,fontSize: 10)),
+                            ),
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Image.asset("assets/heartPulse.png"),
-                          Padding(
-                           padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text("Pulse rate",style: TextStyle(color: Colors.white,fontSize: 10)),
-                          ),
-                        ],
+                      Container(
+                        width: MediaQuery.of(context).size.width *0.30,
+                        child: Row(
+                          children: <Widget>[
+                            Image.asset("assets/hygrometer.png",height: 20,),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text("Blood pressure",style: TextStyle(color: Colors.white,fontSize: 10)),
+                            ),
+                          ],
+                        ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Image.asset("assets/hygrometer.png"),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text("Blood pressure",style: TextStyle(color: Colors.white,fontSize: 10)),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                       
-                          Container(
-                             decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      color:Colors.white,
-                      
-                      ),
-                            child: Text('Edit\n Details',style: TextStyle(color: Colors.blue,fontSize: 10),)),
-                       
-                        ],
+                      Container(
+                        width: MediaQuery.of(context).size.width *0.24,
+
+
+                        child: Row(
+                          children: <Widget>[
+
+                            Container(
+
+                               decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(2.0)),
+                        color:Colors.white,
+
+                        ),
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(20,10,20,10),
+                                child: Text('Edit  \n Details', textAlign: TextAlign.center,style: TextStyle(color: Colors.blue,fontSize: 10),),
+                              )),
+
+                          ],
+                        ),
                       ),
 
 
@@ -148,7 +183,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Container(
-                    height: 120,
+                    height: 90,
 
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
@@ -161,7 +196,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: <Widget>[
-                            Image.asset("assets/inquiry.png"),
+                            Image.asset("assets/inquiry.png",height: 35),
                             Text("current problem story\n (photos/text/videos)",style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontSize: 10
@@ -174,7 +209,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   ),
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -186,7 +221,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       child: Center(
                         child: Column(
                           children: <Widget>[
-                            Image.asset("assets/hospital+.png"),
+                            Image.asset("assets/hospital+.png",height: 35),
                             Text("other medical problem(s)\n & family history", textAlign: TextAlign.center, style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontSize: 10
@@ -204,7 +239,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -216,7 +251,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       child: Center(
                         child: Column(
                           children: <Widget>[
-                            Image.asset("assets/diabetes.png"),
+                            Image.asset("assets/diabetes.png",height: 35),
                             Text("Blood sugar \n log", textAlign: TextAlign.center, style: TextStyle(
                                 color: Colors.blueGrey,
                                 fontSize: 10
@@ -229,7 +264,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   ),
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -240,7 +275,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/labItems.png"),
+                          Image.asset("assets/labItems.png",height: 35,),
                           Text("Blood,Urine,X-ray,\n CT-scan,MRI Reports", textAlign: TextAlign.center , style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -258,7 +293,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 children: <Widget>[
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -269,7 +304,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/hospitalRoom.png"),
+                          Image.asset("assets/hospitalRoom.png",height: 35),
                           Text("Last hospital admission\nand discharge summary", textAlign: TextAlign.center , style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -281,7 +316,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   ),
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //
@@ -292,7 +327,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/ongoingMedicine.png"),
+                          Image.asset("assets/ongoingMedicine.png",height: 35),
                           Text("ongoing Medicine & allergy\n to any medicine and food", textAlign: TextAlign.center,  style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -309,7 +344,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Container(
-                    height: 120,
+                    height: 90,
 
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
@@ -321,7 +356,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/wine.png"),
+                          Image.asset("assets/wine.png",height: 35),
                           Text("Smoking,tobbaco,\n alcohal & other habit", textAlign: TextAlign.center , style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -333,7 +368,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   ),
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -344,7 +379,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/microscope.png"),
+                          Image.asset("assets/microscope.png",height: 35),
                           Text("Biopsy reports", textAlign: TextAlign.center , style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -361,7 +396,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -372,7 +407,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/pillReminder.png"),
+                          Image.asset("assets/pillReminder.png",height: 35),
                           Text("medical reminder", textAlign: TextAlign.center ,style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
@@ -384,7 +419,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   ),
 
                   Container(
-                    height: 120,
+                    height: 90,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey,
                         width: 1, //                   <--- border width here
@@ -395,7 +430,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         children: <Widget>[
-                          Image.asset("assets/training.png"),
+                          Image.asset("assets/training.png",height: 35,),
                           Text("doctor's E-prescription", textAlign: TextAlign.center , style: TextStyle(
                               color: Colors.blueGrey,
                               fontSize: 10
