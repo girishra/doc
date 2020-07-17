@@ -11,7 +11,6 @@ class _HealthWalletShopListState extends State<HealthWallet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body:   Container(
         height: MediaQuery.of(context).size.height,
 
@@ -19,6 +18,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
           child: Column(
             children: <Widget>[
               Container(
+
                 decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Color.fromRGBO(56, 103, 180, 1),
@@ -211,261 +211,266 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                   color: Colors.black,fontSize: 18
               ),),
 
-              Table(
-                children: [
-                  TableRow(
-                      children: [
-                        Container(
-                          height: 90,
+              Expanded(
+                child: Container(
+                  height: MediaQuery.of(context).size.height,
+                  child: Table(
+                    children: [
+                      TableRow(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
 
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
 
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: <Widget>[
-                                  Image.asset("assets/inquiry.png",height: 35),
-                                  Text("current problem story\n (photos/text/videos)",style: TextStyle(
-                                      color: Colors.blueGrey,
-                                      fontSize: 10
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/inquiry.png",height: 35),
+                                      Text("current problem story\n (photos/text/videos)",style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 10
+                                      ),
+                                      ),
+                                    ],
                                   ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //
-                            ),),
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //
+                                ),),
 
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Center(
-                              child: Column(
-                                children: <Widget>[
-                                  Image.asset("assets/hospital+.png",height: 35),
-                                  Text("other medical problem(s)\n & family history", textAlign: TextAlign.center, style: TextStyle(
-                                      color: Colors.blueGrey,
-                                      fontSize: 10
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/hospital+.png",height: 35),
+                                      Text("other medical problem(s)\n & family history", textAlign: TextAlign.center, style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 10
+                                      ),
+                                      ),
+                                    ],
                                   ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-                      ]
-                  ),
-                  TableRow(
-                      children: [
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
+                          ]
+                      ),
+                      TableRow(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
 
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Center(
-                              child: Column(
-                                children: <Widget>[
-                                  Image.asset("assets/diabetes.png",height: 35),
-                                  Text("Blood sugar \n log", textAlign: TextAlign.center, style: TextStyle(
-                                      color: Colors.blueGrey,
-                                      fontSize: 10
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/diabetes.png",height: 35),
+                                      Text("Blood sugar \n log", textAlign: TextAlign.center, style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 10
+                                      ),
+                                      ),
+                                    ],
                                   ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                        ),
 
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
 
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/labItems.png",height: 35,),
-                                Text("Blood,Urine,X-ray,\n CT-scan,MRI Reports", textAlign: TextAlign.center , style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/labItems.png",height: 35,),
+                                    Text("Blood,Urine,X-ray,\n CT-scan,MRI Reports", textAlign: TextAlign.center , style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
                                 ),
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                        ),
-                      ]
+                          ]
+                      ),
+                      TableRow(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/hospitalRoom.png",height: 35),
+                                    Text("Last hospital admission\nand discharge summary", textAlign: TextAlign.center , style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/ongoingMedicine.png",height: 35),
+                                    Text("ongoing Medicine & allergy\n to any medicine and food", textAlign: TextAlign.center,  style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]
+                      ),
+                      TableRow(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/wine.png",height: 35),
+                                    Text("Smoking,tobbaco,\n alcohal & other habit", textAlign: TextAlign.center , style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/microscope.png",height: 35),
+                                    Text("Biopsy reports", textAlign: TextAlign.center , style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]
+                      ),   TableRow(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/pillReminder.png",height: 35),
+                                    Text("medical reminder", textAlign: TextAlign.center ,style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            Container(
+                              height: MediaQuery.of(context).size.height*0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),),
+
+                              width: MediaQuery.of(context).size.width *0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Image.asset("assets/training.png",height: 35,),
+                                    Text("doctor's E-prescription", textAlign: TextAlign.center , style: TextStyle(
+                                        color: Colors.blueGrey,
+                                        fontSize: 10
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]
+                      ),
+
+                    ],
                   ),
-                  TableRow(
-                      children: [
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/hospitalRoom.png",height: 35),
-                                Text("Last hospital admission\nand discharge summary", textAlign: TextAlign.center , style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/ongoingMedicine.png",height: 35),
-                                Text("ongoing Medicine & allergy\n to any medicine and food", textAlign: TextAlign.center,  style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ]
-                  ),
-                  TableRow(
-                      children: [
-                        Container(
-                          height: 90,
-
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/wine.png",height: 35),
-                                Text("Smoking,tobbaco,\n alcohal & other habit", textAlign: TextAlign.center , style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/microscope.png",height: 35),
-                                Text("Biopsy reports", textAlign: TextAlign.center , style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ]
-                  ),   TableRow(
-                      children: [
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/pillReminder.png",height: 35),
-                                Text("medical reminder", textAlign: TextAlign.center ,style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        Container(
-                          height: 90,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey,
-                              width: 1, //                   <--- border width here
-                            ),),
-
-                          width: MediaQuery.of(context).size.width *0.5,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: <Widget>[
-                                Image.asset("assets/training.png",height: 35,),
-                                Text("doctor's E-prescription", textAlign: TextAlign.center , style: TextStyle(
-                                    color: Colors.blueGrey,
-                                    fontSize: 10
-                                ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ]
-                  ),
-
-                ],
+                ),
               ),
 
 

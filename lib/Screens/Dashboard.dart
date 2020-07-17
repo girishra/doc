@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
 
@@ -28,6 +29,51 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+              preferredSize: Size.fromHeight(55.0),
+                    child: AppBar(
+            title: Container(
+              child: Row(
+                children: [
+                  Image.asset(
+                    "assets/notification.png",
+                    fit: BoxFit.cover,
+                    height: 26,
+                  ),
+                  SizedBox(width:  MediaQuery.of(context).size.width/4.5,),
+                  RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "Yours location",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "\n33B Baker's Street",
+                            style: TextStyle(
+                              fontSize:18,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+            ),actions: <Widget>[
+             Row(
+               children: <Widget>[
+                 Image.asset("assets/icons8_Settings_100px_1.png", height: 48,  fit: BoxFit.cover,)
+               ],
+             )
+            ],
+            backgroundColor: Colors.white,
+        ),
+         ),
       backgroundColor:  Colors.white,
       body: Column(
         children: <Widget>[
@@ -55,22 +101,40 @@ class _DashboardState extends State<Dashboard> {
                                 children: <Widget>[
                                   Expanded(
                                     child:Container(
-
+                                      
                                       alignment: Alignment.topCenter,
                                       width: double.infinity,
                                       decoration: BoxDecoration(
+                                        
                                         image: DecorationImage(
                                           image: NetworkImage(
                                               'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
-                                          fit: BoxFit.fill,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ) ,
                                   ),
 
-                                  SizedBox(
-                                    height: 20,
-                                  ),
+                                  // SizedBox(
+                                  //   height: 20,
+                                  // ),
+                              new Container(
+                  // margin: EdgeInsets.only(top: 400.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      color:Colors.green,
+                      // borderRadius: BorderRadius.all(Radius.circular(50.0)
+                      // )
+                      ),
+                  padding: EdgeInsets.all(10.0),
+                  child: new Text(
+                    "Consult a doctor now ",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
@@ -1361,7 +1425,7 @@ class _DashboardState extends State<Dashboard> {
                       // reverse: true,
                     ),
                     align: IndicatorAlign.top,
-                    padding: const EdgeInsets.all(177),
+                    padding: const EdgeInsets.all(200),
                     length: 4,
                     indicatorSpace: 20.0,
                   ),
