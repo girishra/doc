@@ -19,6 +19,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
           child: Column(
             children: <Widget>[
               Container(
+                
                 decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Color.fromRGBO(56, 103, 180, 1),
@@ -216,7 +217,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                       children: [
                         Container(
-                          height: 90,
+                         height: MediaQuery.of(context).size.height*0.15,
 
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey,
@@ -241,7 +242,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
                         ),
                         Container(
-                          height: 90,
+                        height: MediaQuery.of(context).size.height*0.15,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey,
                               width: 1, //
@@ -269,7 +270,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                            height: 90,
+                           height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -294,7 +295,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                            height: 90,
+                           height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -320,7 +321,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                            height: 90,
+                           height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -343,7 +344,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                            height: 90,
+                          height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //
@@ -369,7 +370,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                            height: 90,
+                         height: MediaQuery.of(context).size.height*0.15,
 
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
@@ -393,7 +394,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                            height: 90,
+                       height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -418,7 +419,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     ),   TableRow(
                         children: [
                           Container(
-                            height: 90,
+                           height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -441,7 +442,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                            height: 90,
+                          height: MediaQuery.of(context).size.height*0.15,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
