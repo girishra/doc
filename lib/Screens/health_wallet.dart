@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class HealthWallet extends StatefulWidget {
@@ -11,6 +12,68 @@ class _HealthWalletShopListState extends State<HealthWallet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: PreferredSize(
+         preferredSize: Size.fromHeight(70.0),
+              child: AppBar(
+                backgroundColor: Colors.lightBlue,
+           title: Padding(
+             padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+             child: Container(
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/BackArrow.png",
+                        fit: BoxFit.cover,
+                        height: 30,
+                      ),
+                    SizedBox( width: MediaQuery.of(context).size.width/30,),
+                      Text('Health Wallet',style: TextStyle(
+                        fontSize: 18
+                      ),)
+                    ],
+                  ),
+                ),
+           ),
+    // leading: Image.asset('assets/BackArrow.png'), // you can put Icon as well, it accepts any widget.
+    // title: Text ("Your Title"),
+    actions: [
+        Image.asset("assets/userMale.png",height: 28,),
+         Image.asset("assets/profileImage.png"),
+         Padding(
+           padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+           child: RichText(
+                          textAlign: TextAlign.start,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Mark Samuels",
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "\n27 years old",
+                                style: TextStyle(
+                                  fontSize:10,
+                                  color: Colors.white,
+                                ),
+                              ),
+                               TextSpan(
+                                text: "\nNoida",
+                                style: TextStyle(
+                                  fontSize:10,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+         ),
+          Icon(Icons.more_vert),
+    ],
+),
+      ),
 
       body:   Container(
         height: MediaQuery.of(context).size.height,
@@ -217,7 +280,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                       children: [
                         Container(
-                         height: MediaQuery.of(context).size.height*0.15,
+                         height: MediaQuery.of(context).size.height*0.13,
 
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey,
@@ -242,7 +305,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
                         ),
                         Container(
-                        height: MediaQuery.of(context).size.height*0.15,
+                        height: MediaQuery.of(context).size.height*0.13,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey,
                               width: 1, //
@@ -270,7 +333,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                           height: MediaQuery.of(context).size.height*0.15,
+                           height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -295,7 +358,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                           height: MediaQuery.of(context).size.height*0.15,
+                           height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -321,7 +384,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                           height: MediaQuery.of(context).size.height*0.15,
+                           height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -344,7 +407,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                          height: MediaQuery.of(context).size.height*0.15,
+                          height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //
@@ -370,7 +433,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     TableRow(
                         children: [
                           Container(
-                         height: MediaQuery.of(context).size.height*0.15,
+                         height: MediaQuery.of(context).size.height*0.13,
 
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
@@ -394,7 +457,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                       height: MediaQuery.of(context).size.height*0.15,
+                       height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -419,7 +482,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                     ),   TableRow(
                         children: [
                           Container(
-                           height: MediaQuery.of(context).size.height*0.15,
+                           height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
@@ -442,7 +505,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                           ),
 
                           Container(
-                          height: MediaQuery.of(context).size.height*0.15,
+                          height: MediaQuery.of(context).size.height*0.13,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.grey,
                                 width: 1, //                   <--- border width here
