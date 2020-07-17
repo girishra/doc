@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
 
@@ -30,62 +29,67 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-              preferredSize: Size.fromHeight(55.0),
-                    child: AppBar(
-            title: Container(
-              child: Row(
-                children: [
-                  Image.asset(
-                    "assets/notification.png",
-                    fit: BoxFit.cover,
-                    height: 26,
-                  ),
-                  SizedBox(width:  MediaQuery.of(context).size.width/4.5,),
-                  RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "Yours location",
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "\n33B Baker's Street",
-                            style: TextStyle(
-                              fontSize:18,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
+        preferredSize: Size.fromHeight(55.0),
+        child: AppBar(
+          title: Container(
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/notification.png",
+                  fit: BoxFit.cover,
+                  height: 26,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 4.5,
+                ),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Yours location",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
-                ],
-              ),
-            ),actions: <Widget>[
-             Row(
-               children: <Widget>[
-                 Image.asset("assets/icons8_Settings_100px_1.png", height: 48,  fit: BoxFit.cover,)
-               ],
-             )
-            ],
-            backgroundColor: Colors.white,
+                      TextSpan(
+                        text: "\n33B Baker's Street",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            Row(
+              children: <Widget>[
+                Image.asset(
+                  "assets/icons8_Settings_100px_1.png",
+                  height: 48,
+                  fit: BoxFit.cover,
+                )
+              ],
+            )
+          ],
+          backgroundColor: Colors.white,
         ),
-         ),
-      backgroundColor:  Colors.white,
+      ),
+      backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(0,0,0,10),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
               child: Container(
                 color: Colors.white,
                 child: Container(
-
                   child: PageIndicatorContainer(
-
                     indicatorColor: Colors.grey[200],
                     indicatorSelectorColor: Colors.blue,
                     key: key,
@@ -99,42 +103,50 @@ class _DashboardState extends State<Dashboard> {
                             children: <Widget>[
                               Column(
                                 children: <Widget>[
-                                  Expanded(
-                                    child:Container(
-                                      
-                                      alignment: Alignment.topCenter,
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                        
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
-                                          fit: BoxFit.cover,
+
+
+                                  Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          alignment: Alignment.topCenter,
+                                          width: double.infinity,
+                                          height: MediaQuery.of(context).size.height *0.20,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ) ,
+                                        Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Center(child: new Container(
+                                            margin: EdgeInsets.only(top: 100.0),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(5.0)),
+                                              color: Colors.green,
+                                              // )
+                                            ),
+                                            padding: EdgeInsets.all(10.0),
+                                            child: new Text(
+                                              "Consult a doctor now ",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ),),
+                                        ),
+                                      ]
                                   ),
 
-                                  // SizedBox(
-                                  //   height: 20,
-                                  // ),
-                              new Container(
-                  // margin: EdgeInsets.only(top: 400.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      color:Colors.green,
-                      // borderRadius: BorderRadius.all(Radius.circular(50.0)
-                      // )
-                      ),
-                  padding: EdgeInsets.all(10.0),
-                  child: new Text(
-                    "Consult a doctor now ",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
+
+                                   SizedBox(
+                                     height: 20,
+                                   ),
+
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
@@ -148,7 +160,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/corona.png",
                                                 width: 30,
@@ -173,7 +186,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/lab.png",
                                                 width: 30,
@@ -198,7 +212,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/pills.png",
                                                 width: 30,
@@ -223,7 +238,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/search.png",
                                                 width: 30,
@@ -255,7 +271,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/ambulance.png",
                                                 width: 30,
@@ -280,7 +297,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/female.png",
                                                 width: 30,
@@ -305,7 +323,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/pills.png",
                                                 width: 30,
@@ -330,7 +349,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/syringe.png",
                                                 width: 30,
@@ -362,7 +382,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/pregnant.png",
                                                 width: 30,
@@ -387,7 +408,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/calculator.png",
                                                 width: 30,
@@ -412,7 +434,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/meal.png",
                                                 width: 30,
@@ -437,7 +460,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/training.png",
                                                 width: 30,
@@ -461,21 +485,42 @@ class _DashboardState extends State<Dashboard> {
 
                               Column(
                                 children: <Widget>[
-                              Expanded(
-                              child:Container(
-
-                                alignment: Alignment.topCenter,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                        'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
-                                    fit: BoxFit.fill,
+                                  Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          alignment: Alignment.topCenter,
+                                          width: double.infinity,
+                                          height: MediaQuery.of(context).size.height *0.20,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Center(child: new Container(
+                                            margin: EdgeInsets.only(top: 100.0),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(5.0)),
+                                              color: Colors.green,
+                                              // )
+                                            ),
+                                            padding: EdgeInsets.all(10.0),
+                                            child: new Text(
+                                              "Consult a doctor now ",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ),),
+                                        ),
+                                      ]
                                   ),
-                                ),
-                              )
-                              ),
-
                                   SizedBox(
                                     height: 20,
                                   ),
@@ -492,7 +537,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/stethoscope.png",
                                                 width: 30,
@@ -517,7 +563,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/earth.png",
                                                 width: 30,
@@ -542,7 +589,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/tv.png",
                                                 width: 30,
@@ -567,7 +615,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/Sneeze.png",
                                                 width: 30,
@@ -599,7 +648,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/map.png",
                                                 width: 30,
@@ -624,7 +674,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/reading.png",
                                                 width: 30,
@@ -649,7 +700,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/wash.png",
                                                 width: 30,
@@ -674,7 +726,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/food.png",
                                                 width: 30,
@@ -706,7 +759,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/video.png",
                                                 width: 30,
@@ -731,7 +785,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/mask.png",
                                                 width: 30,
@@ -756,7 +811,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/pestle.png",
                                                 width: 30,
@@ -781,7 +837,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/ebook.png",
                                                 width: 30,
@@ -801,25 +858,44 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ],
                               ),
-
-
                               Column(
                                 children: <Widget>[
-                                  Expanded(
-                                    child:Container(
-
-                                      alignment: Alignment.topCenter,
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
-                                          fit: BoxFit.fill,
+                                  Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          alignment: Alignment.topCenter,
+                                          width: double.infinity,
+                                          height: MediaQuery.of(context).size.height *0.20,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ) ,
+                                        Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Center(child: new Container(
+                                            margin: EdgeInsets.only(top: 100.0),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(5.0)),
+                                              color: Colors.green,
+                                              // )
+                                            ),
+                                            padding: EdgeInsets.all(10.0),
+                                            child: new Text(
+                                              "Consult a doctor now ",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ),),
+                                        ),
+                                      ]
                                   ),
-
                                   SizedBox(
                                     height: 20,
                                   ),
@@ -836,7 +912,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/hospital.png",
                                                 width: 30,
@@ -861,7 +938,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/nurse.png",
                                                 width: 30,
@@ -886,7 +964,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/ambulance.png",
                                                 width: 30,
@@ -911,7 +990,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/yoga.png",
                                                 width: 30,
@@ -943,7 +1023,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/calculator.png",
                                                 width: 30,
@@ -968,7 +1049,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/female.png",
                                                 width: 30,
@@ -993,7 +1075,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/pregnant.png",
                                                 width: 30,
@@ -1018,7 +1101,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/meal.png",
                                                 width: 30,
@@ -1050,7 +1134,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/video.png",
                                                 width: 30,
@@ -1075,7 +1160,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/tv.png",
                                                 width: 30,
@@ -1100,7 +1186,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/syringe.png",
                                                 width: 30,
@@ -1125,7 +1212,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/ebook.png",
                                                 width: 30,
@@ -1145,25 +1233,44 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ],
                               ),
-
-
                               Column(
                                 children: <Widget>[
-                                  Expanded(
-                                    child:Container(
-
-                                      alignment: Alignment.topCenter,
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
-                                          fit: BoxFit.fill,
+                                  Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          alignment: Alignment.topCenter,
+                                          width: double.infinity,
+                                          height: MediaQuery.of(context).size.height *0.20,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://www.sermo.com/wp-content/uploads/2017/07/shutterstock_448894387_v2.jpg'),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ) ,
+                                        Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Center(child: new Container(
+                                            margin: EdgeInsets.only(top: 100.0),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(5.0)),
+                                              color: Colors.green,
+                                              // )
+                                            ),
+                                            padding: EdgeInsets.all(10.0),
+                                            child: new Text(
+                                              "Consult a doctor now ",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                          ),),
+                                        ),
+                                      ]
                                   ),
-
                                   SizedBox(
                                     height: 20,
                                   ),
@@ -1180,7 +1287,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/capsule.png",
                                                 width: 30,
@@ -1205,7 +1313,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/facePowder.png",
                                                 width: 30,
@@ -1230,7 +1339,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/hospitalSign.png",
                                                 width: 30,
@@ -1255,7 +1365,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/testTube.png",
                                                 width: 30,
@@ -1287,7 +1398,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/glucometer.png",
                                                 width: 30,
@@ -1312,7 +1424,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/caduceus.png",
                                                 width: 30,
@@ -1337,7 +1450,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/sick.png",
                                                 width: 30,
@@ -1362,7 +1476,8 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             elevation: 4,
                                             child: Padding(
-                                              padding: const EdgeInsets.all(16.0),
+                                              padding:
+                                                  const EdgeInsets.all(16.0),
                                               child: Image.asset(
                                                 "assets/surgical.png",
                                                 width: 30,
@@ -1384,7 +1499,8 @@ class _DashboardState extends State<Dashboard> {
                                   Padding(
                                     padding: const EdgeInsets.all(10.0),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: <Widget>[
                                         Column(
                                           children: <Widget>[
@@ -1395,7 +1511,8 @@ class _DashboardState extends State<Dashboard> {
                                               ),
                                               elevation: 4,
                                               child: Padding(
-                                                padding: const EdgeInsets.all(16.0),
+                                                padding:
+                                                    const EdgeInsets.all(16.0),
                                                 child: Image.asset(
                                                   "assets/pregnant.png",
                                                   width: 30,
@@ -1416,7 +1533,6 @@ class _DashboardState extends State<Dashboard> {
                                   ),
                                 ],
                               ),
-
                             ],
                           ),
                         ),
@@ -1425,16 +1541,14 @@ class _DashboardState extends State<Dashboard> {
                       // reverse: true,
                     ),
                     align: IndicatorAlign.top,
-                    padding: const EdgeInsets.all(200),
+                    padding: const EdgeInsets.all(160),
                     length: 4,
                     indicatorSpace: 20.0,
                   ),
                 ),
               ),
             ),
-
           ),
-
         ],
       ),
     );
