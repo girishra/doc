@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:swasthu/Screens/checkbox.dart';
 
 class HealthWallet extends StatefulWidget {
   @override
@@ -237,7 +238,10 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                        child: RaisedButton(
                          color: Colors.white,
                          textColor: Colors.blue,
-                         onPressed: (){},
+                         onPressed: (){
+                           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>CheckBoxx()));
+
+                         },
                          child: Text("Edit \n Details",textAlign: TextAlign.center,style: TextStyle(fontSize: 10),),
                        )
                      ),
