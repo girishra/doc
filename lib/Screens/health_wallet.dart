@@ -259,7 +259,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                mainAxisSize: MainAxisSize.min,
                children: <Widget>[
                  Flexible(
-                   flex: 3,
+                   flex: 1,
                    child: Row(
                      children: <Widget>[
                        Flexible(
@@ -312,7 +312,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                  ),
                  ///////////////
                  Flexible(
-                    flex: 3,
+                    flex: 1,
                    
                    child: Row(
                      children: <Widget>[
@@ -364,9 +364,8 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                      ],
                    ),
                  ),
-                 /////////////////////
                  Flexible(
-                     flex: 3,
+                     flex: 1,
                    child: Row(
                      children: <Widget>[
                        Expanded(
@@ -415,7 +414,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                  ),
                  ////////////////
                  Flexible(
-                                                        flex: 3,
+                                                        flex: 1,
                    child: Row(
                      children: <Widget>[
                        Expanded(
@@ -465,7 +464,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                  ),
                  ///////////////
                  Flexible(
-                                                        flex: 3,
+                                                        flex: 1,
                    child: Row(
                      children: <Widget>[
                        Expanded(
