@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
+import 'package:swasthu/Screens/specialist.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -120,21 +121,30 @@ class _DashboardState extends State<Dashboard> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(12.0),
-                                          child: Center(child: new Container(
-                                            margin: EdgeInsets.only(top: 90.0),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(5.0)),
-                                              color: Colors.green,
-                                              // )
-                                            ),
-                                            padding: EdgeInsets.all(10.0),
-                                            child: new Text(
-                                              "Consult a doctor now ",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.w600),
+                                          child: Center(child: GestureDetector(
+                                            onTap: (){
+                                                Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                     builder: (BuildContext context) =>
+                                         Specialist()));
+                                            },
+                                                                                      child: new Container(
+                                              margin: EdgeInsets.only(top: 90.0),
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(5.0)),
+                                                color: Colors.green,
+                                                // )
+                                              ),
+                                              padding: EdgeInsets.all(10.0),
+                                              child: new Text(
+                                                "Consult a doctor now ",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18.0,
+                                                    fontWeight: FontWeight.w600),
+                                              ),
                                             ),
                                           ),),
                                         ),
