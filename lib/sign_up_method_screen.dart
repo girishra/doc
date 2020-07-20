@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:swasthu/register_screen.dart';
 import 'components/bottomnavbar.dart';
@@ -122,7 +123,7 @@ class _LoginScreenState extends State<SignupMethods> {
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0))),
-                      label: Text('Register with Google',
+                      label: Text('Register with Facebook',
                         style: TextStyle(color: Colors.white),),
                       icon: new Image.asset('assets/fb.png', height: 38.0,),
                       textColor: Colors.black,
@@ -158,11 +159,11 @@ class _LoginScreenState extends State<SignupMethods> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BottomNav()),
+                              builder: (context) => RegisterScreen()),
                         );
                       },
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
+                          borderRadius: BorderRadius.all(Radius.circular(15.0))),
                       label: Text('Continue user registration',
                           style: TextStyle(
                               color: Colors.blue,

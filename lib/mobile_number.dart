@@ -64,6 +64,8 @@ class _LoginScreenState extends State<MobileNumber> {
                Container(
                 width: double.infinity,
                 child: FlatButton(
+                    shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
                   child: Text("SUBMIT"),
                   textColor: Colors.blue,
                   padding: EdgeInsets.all(16),

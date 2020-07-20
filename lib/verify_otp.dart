@@ -105,6 +105,8 @@ class _LoginScreenState extends State<VerifyOtp> {
             Container(
               width: MediaQuery.of(context).size.width,
               child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
                 child: Text("Resend"),
                 textColor: Colors.blue,
                 padding: EdgeInsets.all(16),
@@ -119,6 +121,8 @@ class _LoginScreenState extends State<VerifyOtp> {
             Container(
                 width: MediaQuery.of(context).size.width,
               child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
                 child: Text("Submit"),
                 textColor: Colors.blue,
                 padding: EdgeInsets.all(16),

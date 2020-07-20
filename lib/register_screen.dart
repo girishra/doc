@@ -7,6 +7,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<RegisterScreen> {
+  Color _selectedColor;
   final _nameController = TextEditingController();
 
   final _emailController = TextEditingController();
@@ -93,26 +94,47 @@ class _LoginScreenState extends State<RegisterScreen> {
               ),
               SizedBox(
                 width: 100,
-                child: DropdownButton(
-                  hint: Text(
-                    'Gender',
-                    style: TextStyle(color: Colors.white),
-                  ), 
-                  value: _selectedLocation,
-                  onChanged: (newValue) {
-                    setState(() {
-                      _selectedLocation = newValue;
-                    });
-                  },
-                  items: _locations.map((location) {
-                    print(_selectedLocation);
-                    return DropdownMenuItem(
-                      child: new Text(
-                        location,
-                      ),
-                      value: location,
-                    );
-                  }).toList(),
+                child: new Theme(
+                   data: Theme.of(context).copyWith(
+            canvasColor: Colors.blue.shade200,
+          ),
+                                  child: DropdownButtonFormField(
+                    
+                     style: TextStyle(color: Colors.white,fontSize: 16),
+                    iconEnabledColor: Colors.white,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(color: Colors.grey[200])),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(color: Colors.grey[300])),
+                      filled: true,
+                      fillColor:   Color.fromARGB(0, 0, 0, 1),
+                      hintText: "Enter your gender",hintStyle: TextStyle(
+                        color: Colors.white
+                      )),
+                    hint: Text(
+                      '',
+                      style: TextStyle(color: Colors.white),
+                    ), 
+                    value: _selectedLocation,
+                    onChanged: (newValue) {
+                      setState(() {
+                        
+                        _selectedLocation = newValue;
+                      });
+                    },
+                    items: _locations.map((location) {
+                      print(_selectedLocation);
+                      return DropdownMenuItem(
+                        child: new Text(
+                          location,
+                        ),
+                        value: location,
+                      );
+                    }).toList(),
+                  ),
                 ),
               ),
               SizedBox(
@@ -135,49 +157,7 @@ class _LoginScreenState extends State<RegisterScreen> {
                       color: Colors.white
                     )),
                 controller: _ageController,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height/45,
-              ),
-              TextFormField(
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.grey[200])),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.grey[300])),
-                    filled: true,
-                   fillColor:   Color.fromARGB(0, 0, 0, 1),
-                    hintText: "Password",hintStyle: TextStyle(
-                      color: Colors.white
-                    )),
-                controller: _passController,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height/45,
-              ),
-              TextFormField(
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.grey[200])),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.grey[300])),
-                    filled: true,
-                   fillColor:   Color.fromARGB(0, 0, 0, 1),
-                    hintText: "Confirm Password",hintStyle: TextStyle(
-                      color: Colors.white
-                    )),
-                controller: _passController,
-              ),
+              ), 
               SizedBox(
                 height: MediaQuery.of(context).size.height/15,
               ),

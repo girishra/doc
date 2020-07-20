@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:swasthu/forgot_password.dart';
 import 'package:swasthu/mobile_number.dart';
 import 'intro_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+class Forgotpassword extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  final _phoneController = TextEditingController();
+class _LoginScreenState extends State<Forgotpassword> {
+  final _emailController = TextEditingController();
  bool _obscureTextLogin = true;
-  final _passController = TextEditingController();
  void _toggleLogin() {
     setState(() {
       _obscureTextLogin = !_obscureTextLogin;
@@ -45,12 +43,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: MediaQuery.of(context).size.height/20,
               ),
             ),
-            SizedBox( height: MediaQuery.of(context).size.height/25,),
-            Center(
-                child: Text(
-              "Login",
-              style: TextStyle(color: Colors.white, fontSize: 36),
-            )),
+            // SizedBox( height: MediaQuery.of(context).size.height/25,),
+            // Center(
+            //     child: Text(
+            //   "Login",
+            //   style: TextStyle(color: Colors.white, fontSize: 36),
+            // )),
             SizedBox(height: MediaQuery.of(context).size.height/10),
             TextFormField(
               style: TextStyle(
@@ -66,47 +64,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderSide: BorderSide(color: Colors.grey[300])),
                   filled: true,
                   fillColor:   Color.fromARGB(0, 0, 0, 1),
-                  hintText: "Phone Number",hintStyle: TextStyle(
+                  hintText: "E-mail address",hintStyle: TextStyle(
                     color: Colors.white
                   )),
-              controller: _phoneController,
+              controller: _emailController,
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height/45,
-            ),
-            TextFormField(style: TextStyle(
-              color: Colors.white
-            ),
-              decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey[200])),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      borderSide: BorderSide(color: Colors.grey[300])),
-                  filled: true,
-                   fillColor:   Color.fromARGB(0, 0, 0, 1),
-                  hintText: "Password",hintStyle: TextStyle(
-                    color: Colors.white
-                  ),  suffixIcon: GestureDetector(
-                            onTap: _toggleLogin,
-                            child: Icon(
-                              Icons.remove_red_eye,
-                              size: 15.0,
-                              color: Colors.white,
-                            ),
-                          ),),obscureText: _obscureTextLogin,
-              controller: _passController,
-            ),
+           
             SizedBox(
               height:MediaQuery.of(context).size.height/10,
             ),
             Container(
               width: double.infinity,
               child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(5.0))),
-                child: Text("Login"),
+                child: Text("Submit"),
                 textColor: Colors.blue,
                 padding: EdgeInsets.all(16),
                 onPressed: () {
@@ -116,27 +86,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           builder: (BuildContext context) => MobileNumber()));
                 },
                 color: Colors.white,
-              ),
-            ),
-            Center(
-              child: GestureDetector(
-                onTap: (){
-                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => Forgotpassword()));
-                },
-                              child: Container(
-                  child: Text(
-                    "Forgot your password ?",
-                    style: TextStyle(
-                      color: Colors.white,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                  padding: EdgeInsets.all(16),
-                  color: Colors.transparent,
-                ),
               ),
             ),
           ],
