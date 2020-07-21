@@ -116,7 +116,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
             children: <Widget>[
               Container(
                 decoration:
-                    BoxDecoration(color: Color.fromRGBO(15, 148, 180, 1)),
+                BoxDecoration(color: Color.fromRGBO(15, 148, 180, 1)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
@@ -133,7 +133,7 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                             child: Text(
                               "Weight",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 10),
+                              TextStyle(color: Colors.white, fontSize: 10),
                             ),
                           ),
                         ],
@@ -305,392 +305,388 @@ class _HealthWalletShopListState extends State<HealthWallet> {
                 "HEALTH DETAILS",
                 style: TextStyle(color: Colors.black, fontSize: 18),
               ),
-             Expanded(
-               child: Container(
-                 height: double.infinity,
-                 child: Column(
-                   children: <Widget>[
-                     Row(
-                       children: <Widget>[
-                         GestureDetector(
-                           onTap: () {
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         CurrentProblem()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width:
-                                   1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Center(
-                                 child: Padding(
-                                   padding: const EdgeInsets.all(8.0),
-                                   child: Column(
-                                     children: <Widget>[
-                                       Image.asset("assets/inquiry.png", height: 35),
-                                       Text(
-                                         "current problem story\n (photos/text/videos)",
-                                         style: TextStyle(
-                                             color: Colors.blueGrey, fontSize: 10),
-                                       ),
-                                     ],
-                                   ),
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                         GestureDetector(
-                           onTap: (){
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         CheckBoxx()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Center(
-                                   child: Column(
-                                     children: <Widget>[
-                                       Image.asset("assets/hospital+.png", height: 35),
-                                       Text(
-                                         "other medical problem(s)\n & family history",
-                                         textAlign: TextAlign.center,
-                                         style: TextStyle(
-                                             color: Colors.blueGrey, fontSize: 10),
-                                       ),
-                                     ],
-                                   ),
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),
-                     Row(
-                       children: <Widget>[
-                         Expanded(
-                           child: Container(
-                             height: MediaQuery.of(context).size.height * 0.13,
-                             decoration: BoxDecoration(
-                               border: Border.all(
-                                 color: Colors.grey,
-                                 width: 1, //                   <--- border width here
-                               ),
-                             ),
-                             width: MediaQuery.of(context).size.width * 0.5,
-                             child: Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Center(
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/diabetes.png", height: 35),
-                                     Text(
-                                       "Blood sugar \n log",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                         GestureDetector(
-                           onTap: (){
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         LabReports()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset(
-                                       "assets/labItems.png",
-                                       height: 35,
-                                     ),
-                                     Text(
-                                       "Blood,Urine,X-ray,\n CT-scan,MRI Reports",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),
-                     Row(
-                       children: <Widget>[
-                         GestureDetector(
-                           onTap: () {
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         LastHospital()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width:
-                                   1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/hospitalRoom.png",
-                                         height: 35),
-                                     Text(
-                                       "Last hospital admission\nand discharge summary",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                         GestureDetector(
-                           onTap: () {
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         OngoingMedicine()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/ongoingMedicine.png",
-                                         height: 35),
-                                     Text(
-                                       "ongoing Medicine & allergy\n to any medicine and food",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),
-                     Row(
-                       children: <Widget>[
-                         GestureDetector(
-                           onTap: () {
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         OngoingMedicine()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width:
-                                   1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/wine.png", height: 35),
-                                     Text(
-                                       "Smoking,tobbaco,\n alcohal & other habit",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                         GestureDetector(
-                           onTap: (){
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         BiopsyReports()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/microscope.png", height: 35),
-                                     Text(
-                                       "Biopsy reports",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),
-                     Row(
-                       children: <Widget>[
-                         GestureDetector(
-                           onTap: (){
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         MedicalReminder()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset("assets/pillReminder.png", height: 35),
-                                     Text(
-                                       "medical reminder",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                         GestureDetector(
-                           onTap: (){
-                             Navigator.push(
-                                 context,
-                                 MaterialPageRoute(
-                                     builder: (BuildContext context) =>
-                                         EPrescription()));
-                           },
-                           child: Expanded(
-                             child: Container(
-                               height: MediaQuery.of(context).size.height * 0.13,
-                               decoration: BoxDecoration(
-                                 border: Border.all(
-                                   color: Colors.grey,
-                                   width: 1, //                   <--- border width here
-                                 ),
-                               ),
-                               width: MediaQuery.of(context).size.width * 0.5,
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Column(
-                                   children: <Widget>[
-                                     Image.asset(
-                                       "assets/training.png",
-                                       height: 35,
-                                     ),
-                                     Text(
-                                       "doctor's E-prescription",
-                                       textAlign: TextAlign.center,
-                                       style: TextStyle(
-                                           color: Colors.blueGrey, fontSize: 10),
-                                     ),
-                                   ],
-                                 ),
-                               ),
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),
-                   ],
-                 ),
-               ),
-             )
+              Expanded(
+                child: Container(
+                  height: double.infinity,
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => CurrentProblem()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width:
+                                    1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Image.asset("assets/inquiry.png", height: 35),
+                                        Text(
+                                          "current problem story\n (photos/text/videos)",
+                                          style: TextStyle(
+                                              color: Colors.blueGrey, fontSize: 10),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          CheckBoxx()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Center(
+                                    child: Column(
+                                      children: <Widget>[
+                                        Image.asset("assets/hospital+.png", height: 35),
+                                        Text(
+                                          "other medical problem(s)\n & family history",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.blueGrey, fontSize: 10),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.13,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                  width: 1, //                   <--- border width here
+                                ),
+                              ),
+                              width: MediaQuery.of(context).size.width * 0.5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/diabetes.png", height: 35),
+                                      Text(
+                                        "Blood sugar \n log",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          LabReports()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset(
+                                        "assets/labItems.png",
+                                        height: 35,
+                                      ),
+                                      Text(
+                                        "Blood,Urine,X-ray,\n CT-scan,MRI Reports",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          LastHospital()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width:
+                                    1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/hospitalRoom.png",
+                                          height: 35),
+                                      Text(
+                                        "Last hospital admission\nand discharge summary",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          OngoingMedicine()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/ongoingMedicine.png",
+                                          height: 35),
+                                      Text(
+                                        "ongoing Medicine & allergy\n to any medicine and food",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          OngoingMedicine()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width:
+                                    1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/wine.png", height: 35),
+                                      Text(
+                                        "Smoking,tobbaco,\n alcohal & other habit",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          BiopsyReports()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/microscope.png", height: 35),
+                                      Text(
+                                        "Biopsy reports",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          MedicalReminder()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset("assets/pillReminder.png", height: 35),
+                                      Text(
+                                        "medical reminder",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          EPrescription()));
+                            },
+                            child: Expanded(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height * 0.13,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                    width: 1, //                   <--- border width here
+                                  ),
+                                ),
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Image.asset(
+                                        "assets/training.png",
+                                        height: 35,
+                                      ),
+                                      Text(
+                                        "doctor's E-prescription",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.blueGrey, fontSize: 10),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),

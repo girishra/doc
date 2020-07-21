@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
+import 'package:swasthu/Screens/VideoAppointment.dart';
+import 'package:swasthu/Screens/doctorsList.dart';
 import 'package:swasthu/Screens/specialist.dart';
 
 class Dashboard extends StatefulWidget {
@@ -162,19 +164,24 @@ class _DashboardState extends State<Dashboard> {
                                           children: <Widget>[
                                             Column(
                                               children: <Widget>[
-                                                Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10),
-                                                  ),
-                                                  elevation: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                    const EdgeInsets.all(10.0),
-                                                    child: Image.asset(
-                                                      "assets/corona.png",
-                                                      width: 30,
-                                                      height: 30,
+                                                GestureDetector(
+                                                  onTap:(){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => DocList()));
+                                                  },
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(10),
+                                                    ),
+                                                    elevation: 4,
+                                                    child: Padding(
+                                                      padding:
+                                                      const EdgeInsets.all(10.0),
+                                                      child: Image.asset(
+                                                        "assets/corona.png",
+                                                        width: 30,
+                                                        height: 30,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
@@ -188,19 +195,24 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             Column(
                                               children: <Widget>[
-                                                Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10),
-                                                  ),
-                                                  elevation: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                    const EdgeInsets.all(10.0),
-                                                    child: Image.asset(
-                                                      "assets/lab.png",
-                                                      width: 30,
-                                                      height: 30,
+                                                GestureDetector(
+                                                  onTap:(){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => VAppointment()));
+                                                  },
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(10),
+                                                    ),
+                                                    elevation: 4,
+                                                    child: Padding(
+                                                      padding:
+                                                      const EdgeInsets.all(10.0),
+                                                      child: Image.asset(
+                                                        "assets/lab.png",
+                                                        width: 30,
+                                                        height: 30,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
