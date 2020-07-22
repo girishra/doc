@@ -13,6 +13,39 @@ class _MedicalOnlineState extends State<MedicalOnline> {
     String radioItem = '';
     String dropdownValue = 'One';
 
+
+
+
+    void _showDialog() {
+      // flutter defined function
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          // return object of type Dialog
+          return AlertDialog(
+
+            title: Center(child: new Text("Order Medicine",style: TextStyle(color: Colors.blue),)),
+            content: new Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer "),
+            actions: <Widget>[
+              // usually buttons at the bottom of the dialog
+              new  Container(
+                width: 300,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                  child: Text("Continue"),
+                  textColor: Colors.white,
+                  padding: EdgeInsets.all(16),
+                  onPressed: (){},
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    }
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -24,153 +57,155 @@ class _MedicalOnlineState extends State<MedicalOnline> {
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0,80,0,40),
-            child: Align(
-              child: Card(
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      ListTile(
-                        title:Text("Medicare Pharmacy",style: TextStyle(fontWeight: FontWeight.bold),) ,
-                        subtitle: Text("Shop No 23/1, Sector 63, Noida, Uttar Pradesh"),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,30,10,10),
-                        child: TextFormField(
-                          style: TextStyle(
-                              color: Colors.grey
-                          ),
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[200])),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[300])),
-                              filled: true,
-                              fillColor:   Colors.black12,
-                              hintText: "Upload description ",hintStyle: TextStyle(
-                              color: Colors.grey
-                          )),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,10,10,10),
-                        child: TextFormField(
-                          style: TextStyle(
-                              color: Colors.grey
-                          ),
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[200])),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[300])),
-                              filled: true,
-                              fillColor:   Colors.black12,
-                              hintText: "Delivery address ",hintStyle: TextStyle(
-                              color: Colors.grey
-                          )),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,10,10,10),
-                        child: TextFormField(
-                          style: TextStyle(
-                              color: Colors.grey
-                          ),
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[200])),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                                  borderSide: BorderSide(color: Colors.grey[300])),
-                              filled: true,
-                              fillColor:   Colors.black12,
-                              hintText: "_---___---____-",hintStyle: TextStyle(
-                              color: Colors.grey
-                          )),
-                        ),
-                      ),
 
-                      Row(
-                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          RaisedButton(
-                            onPressed: (){},
-                            color: Colors.black12,
-                            child: Text("Age"),
-                          ),
-                          SizedBox(width: 10,),
-                          RaisedButton(
-                            onPressed: (){},
-                            color: Colors.black12,
-                            child: Text("Age"),
-                          ),
-                        ],
-                      ),
+          Align(
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            alignment: Alignment.topCenter,
+            child: Container(
+              margin: const EdgeInsets.only(top: 50.0),
 
-                        children: <Widget>[
-                          Container(
-                            width: 40,
-                            child: RadioListTile(
-                              groupValue: radioItem,
-                              title: Text('Male'),
-                              value: 'Male',
-                              onChanged: (val) {
-                                setState(() {
-                                  radioItem = val;
-                                });
-                              },
-                            ),
-                          ),
-
-                          Container(
-                            width: 40,
-                            child: RadioListTile(
-                              groupValue: radioItem,
-                              title: Text('Female'),
-                              value: 'Female',
-                              onChanged: (val) {
-                                setState(() {
-                                  radioItem = val;
-                                });
-                              },
-                            ),
-                          ),
-                          Container(
-                            width: 40,
-                            child: RadioListTile(
-                              groupValue: radioItem,
-                              title: Text('Others'),
-                              value: 'Others',
-                              onChanged: (val) {
-                                setState(() {
-                                  radioItem = val;
-                                });
-                              },
-                            ),
-                          ),
-
-                          Text('$radioItem', style: TextStyle(fontSize: 20),)
-                        ],
-                      )
-
-                    ],
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(color: Colors.black12, spreadRadius: 1),
+                      ],
+                    ),
+                    height: 20,
+                    width: 20,
+//                    color: Colors.blue,
+                    child: Center(child: Text("1",style: TextStyle(color: Colors.black),)),
                   ),
-
-                ),
-              ) ,
+                  Container(
+                    width: 200,
+                    height: 2,
+                    color: Colors.grey,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(color: Colors.black12, spreadRadius: 1),
+                      ],
+                    ),
+                    height: 20,
+                    width: 20,
+//                    color: Colors.blue,
+                    child: Center(child: Text("2",style: TextStyle(color: Colors.black),)),
+                  ),
+                ],
+              ),
             ),
+          ),
+
+          Align(
+            child: Container(
+              margin: const EdgeInsets.only(top: 50.0),
+
+//                height: 400,
+            height: MediaQuery.of(context).size.height *0.70,
+
+              child: Card(
+
+                child: Column(
+                  children: <Widget>[
+                    ListTile(
+                      title:Text("Medicare Pharmacy",style: TextStyle(fontWeight: FontWeight.bold),) ,
+                      subtitle: Text("Shop No 23/1, Sector 63, Noida, Uttar Pradesh"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10,30,10,10),
+                      child: TextFormField(
+                        style: TextStyle(
+                            color: Colors.grey
+                        ),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[200])),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[300])),
+                            filled: true,
+                            fillColor:   Colors.black12,
+                            hintText: "Upload description ",hintStyle: TextStyle(
+                            color: Colors.grey
+                        )),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10,10,10,10),
+                      child: TextFormField(
+                        style: TextStyle(
+                            color: Colors.grey
+                        ),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[200])),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[300])),
+                            filled: true,
+                            fillColor:   Colors.black12,
+                            hintText: "Delivery address ",hintStyle: TextStyle(
+                            color: Colors.grey
+                        )),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10,10,10,10),
+                      child: TextFormField(
+                        style: TextStyle(
+                            color: Colors.grey
+                        ),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[200])),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                borderSide: BorderSide(color: Colors.grey[300])),
+                            filled: true,
+                            fillColor:   Colors.black12,
+                            hintText: "_---___---____-",hintStyle: TextStyle(
+                            color: Colors.grey
+                        )),
+                      ),
+                    ),
+
+                    Row(
+                       mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        RaisedButton(
+                          onPressed: (){},
+                          color: Colors.black12,
+                          child: Text("Age"),
+                        ),
+                        SizedBox(width: 10,),
+                        RaisedButton(
+                          onPressed: (){},
+                          color: Colors.black12,
+                          child: Text("Age"),
+                        ),
+                      ],
+                    ),
+
+
+
+                  ],
+                ),
+              ),
+
+            ) ,
           ),
 
           Align(
@@ -206,12 +241,10 @@ class _MedicalOnlineState extends State<MedicalOnline> {
                    child: FlatButton(
                      shape: RoundedRectangleBorder(
                          borderRadius: BorderRadius.all(Radius.circular(50.0))),
-                     child: Text("Save Details"),
+                     child: Text("Continue"),
                      textColor: Colors.white,
                      padding: EdgeInsets.all(16),
-                     onPressed: () {
-
-                     },
+                     onPressed: _showDialog,
                      color: Colors.blue,
                    ),
                  ),
