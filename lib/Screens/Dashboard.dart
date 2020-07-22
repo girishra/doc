@@ -3,6 +3,7 @@ import 'package:page_indicator/page_indicator.dart';
 import 'package:swasthu/Screens/Form.dart';
 import 'package:swasthu/Screens/VideoAppointment.dart';
 import 'package:swasthu/Screens/doctorsList.dart';
+import 'package:swasthu/Screens/mediacalOnlineScreen.dart';
 import 'package:swasthu/Screens/specialist.dart';
 import 'package:swasthu/Screens/videoCallScreen.dart';
 
@@ -299,19 +300,24 @@ class _DashboardState extends State<Dashboard> {
                                           children: <Widget>[
                                             Column(
                                               children: <Widget>[
-                                                Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10),
-                                                  ),
-                                                  elevation: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                    const EdgeInsets.all(10.0),
-                                                    child: Image.asset(
-                                                      "assets/ambulance.png",
-                                                      width: 30,
-                                                      height: 30,
+                                                GestureDetector(
+                                                  onTap:(){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MedicalOnline()));
+                                                  },
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(10),
+                                                    ),
+                                                    elevation: 4,
+                                                    child: Padding(
+                                                      padding:
+                                                      const EdgeInsets.all(10.0),
+                                                      child: Image.asset(
+                                                        "assets/ambulance.png",
+                                                        width: 30,
+                                                        height: 30,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
