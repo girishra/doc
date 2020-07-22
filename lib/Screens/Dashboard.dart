@@ -4,6 +4,7 @@ import 'package:swasthu/Screens/Form.dart';
 import 'package:swasthu/Screens/VideoAppointment.dart';
 import 'package:swasthu/Screens/doctorsList.dart';
 import 'package:swasthu/Screens/specialist.dart';
+import 'package:swasthu/Screens/videoCallScreen.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -258,19 +259,24 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             Column(
                                               children: <Widget>[
-                                                Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10),
-                                                  ),
-                                                  elevation: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                    const EdgeInsets.all(10.0),
-                                                    child: Image.asset(
-                                                      "assets/search.png",
-                                                      width: 30,
-                                                      height: 30,
+                                                GestureDetector(
+                                                  onTap:(){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => VideoCall()));
+                                                  },
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(10),
+                                                    ),
+                                                    elevation: 4,
+                                                    child: Padding(
+                                                      padding:
+                                                      const EdgeInsets.all(10.0),
+                                                      child: Image.asset(
+                                                        "assets/search.png",
+                                                        width: 30,
+                                                        height: 30,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
