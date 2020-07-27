@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_indicator/page_indicator.dart';
+import 'package:swasthu/Screens/Dr_chat.dart';
 import 'package:swasthu/Screens/Form.dart';
 import 'package:swasthu/Screens/Sugar-Log.dart';
 import 'package:swasthu/Screens/VideoAppointment.dart';
@@ -363,19 +364,25 @@ class _DashboardState extends State<Dashboard> {
                                             ),
                                             Column(
                                               children: <Widget>[
-                                                Card(
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10),
-                                                  ),
-                                                  elevation: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                    const EdgeInsets.all(10.0),
-                                                    child: Image.asset(
-                                                      "assets/pills.png",
-                                                      width: 30,
-                                                      height: 30,
+                                                GestureDetector(
+                                                  onTap: (){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => DoctorChat()));
+
+                                                  },
+                                                  child: Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(10),
+                                                    ),
+                                                    elevation: 4,
+                                                    child: Padding(
+                                                      padding:
+                                                      const EdgeInsets.all(10.0),
+                                                      child: Image.asset(
+                                                        "assets/pills.png",
+                                                        width: 30,
+                                                        height: 30,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
